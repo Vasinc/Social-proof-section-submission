@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap')
+
+$very-dark-magenta: hsl(300, 43%, 22%)
+$soft-pink: hsl(333, 80%, 67%)
+
+$dark-grayish-magenta: hsl(303, 10%, 53%)
+$light-grayish-magenta: hsl(300, 24%, 96%)
+$white: hsl(0, 0%, 100%)
+
+
+body
+    margin: 0
+    padding: 0
+    height: 800px
+    fonts-size: 15px
+    font-family: 'Spartan', sans-serif
+    main
+        width: 90%
+        max-width: 1440px
+        height: 100%
+        margin: auto
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        .header-section
+            display: flex
+            justify-content: space-between
+            .text
+                width: 40%
+                max-width: 500px
+                h1
+                    font-size: 3rem
+                    color: $very-dark-magenta
+                p
+                    font-weight: 700
+                    color: $dark-grayish-magenta
+                    line-height: 1.7
+            .ratings
+                position: relative
+                display: flex
+                flex-direction: column
+                justify-content: center
+                right: 1rem
+                .rating-section
+                    position: relative
+                    margin: 1rem 0
+                    padding: 1rem .5rem
+                    border-radius: .5rem
+                    width: 400px
+                    display: flex
+                    justify-content: space-evenly
+                    align-items: center
+                    color: $very-dark-magenta
+                    font-weight: 700
+                    background: $light-grayish-magenta
+                .rating-section-1
+                    right: 3rem
+                .rating-section-3
+                    left: 3rem
+
+        .body-section
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            .card
+                width: 300px
+                background: $very-dark-magenta
+                padding: 2rem
+                border-radius: 1rem
+                .card-header
+                    display: flex
+                    align-items: center
+                    img
+                        border-radius: 50%
+                        width: 60px
+                    ul
+                        list-style: none
+                        .name
+                            color: $white
+                            font-weight: 700
+                            margin-bottom: .3rem
+                        .function
+                            color: $soft-pink
+                            font-weight: 700
+                .card-body
+                    p
+                        font-weight: 500
+                        color: $light-grayish-magenta
+
+            .card-2
+                position: relative
+                top: 1rem
+            .card-3
+                position: relative
+                top: 2rem
+    .attribution 
+        font-size: 13px
+        text-align: center
+        font-family: 'Spartan', sans-serif
+        font-weight: 700
+        a 
+            color: $very-dark-magenta
+            text-decoration: none
+            transition: color 200ms ease-out
+            &:hover
+                color: darken($very-dark-magenta, 10%)
+            &:active
+                font-weight: 500
+
+@media (max-width: 1225px)
+    body
+        height: 1300px
+        main
+            .body-section
+                flex-direction: column
+
+@media (max-width: 900px)
+    body
+        height: 1600px
+        main
+            .header-section
+                flex-direction: column
+                align-items: center
+                .text
+                    width: 375px
+                .ratings
+                    width: 375px
+                    .rating-section
+                        flex-direction: column
+                        align-items: center
+                    .rating-section-1
+                        right: 0
+                    .rating-section-3
+                        left: 0
